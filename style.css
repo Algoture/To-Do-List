@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
+    background-blend-mode: multiply, multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: white;
+    width: 100%;
+    max-width: 30rem;
+    max-height: 45rem;
+    border-radius: 20px;
+}
+
+.title {
+    margin-top: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    gap: .5rem;
+}
+
+.title img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.title p {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.row {
+    background-color: rgb(194, 194, 194);
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .5rem .5rem 1rem 1rem;
+}
+
+input{
+    flex: 1 ;
+    border: none;
+    outline: none;
+    height: 2rem;
+    margin-left: 2rem;
+    background: transparent;
+}
+
+button{
+    border: none;
+    background-color: cornflowerblue;
+    height: 100%;
+    padding: .5rem 1rem;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+ul li{
+    list-style: none;
+    position: relative;
+    user-select: none;
+    padding:.5rem 3rem;
+}
+
+ul{
+    margin: 1rem;
+}
+ul li::before{
+    content: "";
+    position: absolute;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background-image: url("unchecked.png");
+    background-size: cover;
+    background-position: center ;
+    left: 1rem;
+    bottom: .5rem;
+    cursor: pointer;
+}
+ul li span{
+    text-align: center;
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+    font-size: 1.3rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    line-height: 2rem;
+}
+ul li span:hover{
+    background-color: #dbdbdb;
+}
+ul li.checked{
+    color: #989898;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url("checked.png");
+}
+@media screen and (width<=600px) {
+    .container {
+        width: 100%;
+        max-height: 55rem;
+    }
+    ul li span:hover{
+        background-color: transparent;
+    }
+}
