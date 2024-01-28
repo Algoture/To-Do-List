@@ -14,6 +14,11 @@ function addTask() {
     inBox.value = '';
     saveData();
 }
+document.addEventListener("keydown",(e)=>{
+    if (e.key === "Enter") {
+        addTask();
+    }
+});
 listContainer.addEventListener("click", (e) => {
     if (e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
